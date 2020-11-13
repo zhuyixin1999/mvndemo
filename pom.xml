@@ -27,11 +27,7 @@
 
     </dependencies>
 
-
-
     <build>
         <finalName>greet</finalName>
     </build>
-
-
 </project>

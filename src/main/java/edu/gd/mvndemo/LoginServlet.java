@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+
+// 登录 servlet
 @WebServlet(urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
 
