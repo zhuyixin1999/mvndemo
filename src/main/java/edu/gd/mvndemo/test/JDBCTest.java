@@ -1,8 +1,11 @@
 package edu.gd.mvndemo.test;
 
+import edu.gd.mvndemo.dao.StudentDao;
+import edu.gd.mvndemo.entity.Student;
 import edu.gd.mvndemo.utils.DBUtil;
 
 import java.sql.*;
+import java.util.List;
 
 public class JDBCTest {
 
@@ -81,9 +84,17 @@ public class JDBCTest {
         DBUtil.close(resultSet, statement, connection);
     }
 
+
+
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 //        test1();
-        test2();
+//        test2();
+
+        List<Student> students = StudentDao.getStudents();
+        for (Student student : students)
+        {
+            System.out.println("id: "+student.getId()+ " name: " + student.getName());
+        }
     }
 
 }
